@@ -218,8 +218,7 @@ def write_entry(filename):
     date = util.parse_date(filename)
 
     entry = [
-        "\t\t<p><a name=\""+date[0]+date[1]+date[2]+"\"></a><br /><br /></p>\n",
-        "\t\t<div class=\"entry\">\n",
+        '\t\t<div class="entry" id="{}">\n'.format(date[0]+date[1]+date[2]),
         "\t\t\t<h5><a href=\"#"+date[0]+date[1]+date[2]+"\">"+date[2]+"</a> "+chatter.month(date[1])+" "+date[0]+"</h5>\n"
         #"\t\t\t<P>"
     ]
